@@ -137,6 +137,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.audio.handset.mic=dmic \
 	persist.audio.fluence.mode=endfire \
 	persist.audio.lowlatency.rec=false \
+	ro.qc.sdk.audio.fluencetype=fluence \
 	af.resampler.quality=4 \
 	lpa.decode=true
 

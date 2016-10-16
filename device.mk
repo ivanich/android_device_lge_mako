@@ -276,6 +276,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false
 
+
+# Enable Google Assistant
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opa.eligible_device=true
+
 # Telephony (from android_device_samsung_jf-common. si ca ne marche pas, voir le patch sur telephony 	CyanogenMod/android_packages_services_Telecomm)
 PRODUCT_PACKAGES += \
     telephony-ext

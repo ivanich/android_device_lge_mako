@@ -5,11 +5,10 @@ type camera_exec, exec_type, file_type;
 # Started by init
 init_daemon_domain(camera)
 
-allow camera system_file:file execmod;
 
 # Interact with other media devices
-allow camera camera_device:dir search;
-allow camera { video_device camera_device }:chr_file rw_file_perms;
+allow camera video_device:dir search;
+allow camera { gpu_device video_device }:chr_file rw_file_perms;
 allow camera { surfaceflinger mediaserver }:fd use;
 
 # Create front and back camera sockets (/data/cam_socket[01])
@@ -27,3 +26,18 @@ allow camera gpu_device:chr_file { read write open ioctl };
 # Connect to sensor socket (/data/app/sensor_ctl_socket)
 unix_socket_connect(camera, sensors, sensors)
 allow camera sensors_socket:sock_file read;
+#allow camera system_file:file execmod;
+allow camera cameraserver:fd { use };
+
+# Interact with ion
+allow camera ion_device:chr_file { getattr ioctl read write open };
+
+# Interact with sysfs
+allow camera sysfs:file { getattr read write open };
+
+# Interact with /data
+allow camera apk_data_file:dir { getattr read write open search };
+allow camera storage_file:dir { getattr read write open search };
+allow camera mnt_user_file:dir { getattr read write open search };
+allow camera storage_file:lnk_file { getattr read write open };
+allow camera fuse:dir { getattr read write open search };

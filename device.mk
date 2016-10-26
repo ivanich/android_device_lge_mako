@@ -227,10 +227,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.mako
 
-# Gello
- PRODUCT_PACKAGES += \
-	Gello
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
@@ -275,7 +271,6 @@ PRODUCT_PACKAGES += \
 # Unbreak videorecording with Snap Camera
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.camera.cpp.duplication=false
-
 
 # Enable Google Assistant
 PRODUCT_PROPERTY_OVERRIDES += \

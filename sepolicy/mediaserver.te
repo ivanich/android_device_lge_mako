@@ -13,6 +13,3 @@ allow mediaserver media_rw_data_file:file write;
 
 # For text relocations in /system/vendor/lib/libmmjpeg.so
 #allow mediaserver system_file:file execmod;
-
-# For camera
-allow mediaserver media_rw_data_file:file write;

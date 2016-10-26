@@ -11,6 +11,7 @@ auditallow kickstart self:capability dac_override;
 # Run kickstart
 allow kickstart shell_exec:file rx_file_perms;
 allow kickstart kickstart_exec:file rx_file_perms;
+allow kickstart kickstart_exec:file { open execute_no_trans getattr };
 
 # Let qcks access /dev/mdm node (modem driver)
 allow kickstart radio_device:chr_file r_file_perms;
@@ -31,6 +32,7 @@ allow kickstart radio_efs_file:dir search;
 allow kickstart radio_efs_file:file r_file_perms;
 
 # Run dd from toolbox on firmware files
+allow kickstart shell_exec:file rx_file_perms;
 allow kickstart system_file:file execute_no_trans;
 allow kickstart toolbox_exec:file rx_file_perms;
 

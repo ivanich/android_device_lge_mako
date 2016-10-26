@@ -227,10 +227,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	power.mako
 
-# Gello
- PRODUCT_PACKAGES += \
-	Gello
-
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	rild.libpath=/system/lib/libril-qc-qmi-1.so
 
@@ -278,10 +274,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Needed for legacy Camera HAL1
 PRODUCT_PROPERTY_OVERRIDES += \
-    media.stagefright.legacyencoder=true
-
-# Needed for legacy Camera HAL1
-PRODUCT_PROPERTY_OVERRIDES += \
+    media.stagefright.legacyencoder=true \
     media.stagefright.less-secure=true
 
 

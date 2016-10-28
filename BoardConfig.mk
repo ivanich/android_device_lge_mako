@@ -142,6 +142,7 @@ MALLOC_SVELTE := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
+TARGET_NEEDS_GCC_LIBC := true
 #BOARD_USES_QCOM_HARDWARE := true
 
 # Disable clang, fix sensors

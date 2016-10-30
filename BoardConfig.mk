@@ -143,6 +143,3 @@ BOARD_HARDWARE_CLASS := device/lge/mako/cmhw/
 TARGET_NEEDS_GCC_LIBC := true
 #BOARD_USES_QCOM_HARDWARE := true
 
-# Disable clang, fix sensors
-# USE_CLANG_PLATFORM_BUILD := false
-

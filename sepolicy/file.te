@@ -34,3 +34,5 @@ type sysfs_smdcntl_open_timeout, fs_type, sysfs_type;
 type sysfs_hardware, fs_type, sysfs_type;
 
 type wcnss_ctrl, dev_type;
+
+type sysfs_gpuclk, fs_type, sysfs_type;

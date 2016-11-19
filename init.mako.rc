@@ -438,6 +438,3 @@ service diag_mdlog /system/bin/diag_mdlog -s 100
 # on property:gsm.sim.state=READY
 #    start diag_mdlog
 
-on property:dev.bootcomplete=1
-    stop cameraserver
-    start cameraserver
